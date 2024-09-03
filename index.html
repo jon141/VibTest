@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vibration Beispiel</title>
+    <title>Test 1</title>
 </head>
 <body>
 
-<button id="vibrateBtn">Klicke mich</button>
+<button onclick="vibrate()">Teste Vibration</button>
 
 <script>
-    document.getElementById('vibrateBtn').addEventListener('click', function() {
-        // Vibration für 200ms
+    function vibrate() {
         if (navigator.vibrate) {
-            navigator.vibrate(1500);
+            navigator.vibrate(200); // 200ms Vibration
         } else {
-            alert('Dein Gerät unterstützt keine Vibration.');
+            alert('Vibration wird auf diesem Gerät oder in diesem Browser nicht unterstützt.');
         }
-    });
+    }
 </script>
 
 </body>
