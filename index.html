@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibration Beispiel</title>
+</head>
+<body>
+
+<button id="vibrateBtn">Klicke mich</button>
+
+<script>
+    document.getElementById('vibrateBtn').addEventListener('click', function() {
+        // Vibration für 200ms
+        if (navigator.vibrate) {
+            navigator.vibrate(200);
+        } else {
+            alert('Dein Gerät unterstützt keine Vibration.');
+        }
+    });
+</script>
+
+</body>
+</html>
